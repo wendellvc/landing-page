@@ -1,0 +1,233 @@
+/*
+    custom CSS goes here
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.split {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.split > * {
+    flex-basis: 30%;
+    min-width: 300px;
+}
+
+.spacing > * + * {
+    margin-top: 35px; 
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background: orangered;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: 
+        transform 250ms ease-in-out,
+        opacity 250ms linear;
+}
+
+.btn:hover, 
+.btn:focus {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.hero {
+    text-align: center;
+    padding: 150px 0;
+    background: #555;
+}
+
+.hero > * {
+    color: #fff;
+}
+
+@supports (background-blend-mode: multiply) {
+    .hero {
+        background: url(../images/bg-hero.jpg),
+            radial-gradient(#999, #555);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+}
+
+
+.primary-heading {
+    font-size: 60px;
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-size: clamp( 30px, 5vw, 40px );
+    line-height: 1;
+    color: rgb(140, 26, 6);
+}
+
+.featured__img {
+    max-width: 300px;
+}
+
+.featured {
+    padding: 150px 0;
+    background-color: #eee;
+}
+
+.featured-links {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 0;
+}
+
+.link-item {
+    display: block;
+    margin-right: 30px;
+}
+
+.link-item:last-child {
+    margin-right: 0;
+}
+
+.featured-items {
+    margin-top: 50px;
+}
+
+.featured__item {
+    display: block;
+    position: relative;
+    transform: scale(.85);
+    transition: transform 300ms ease-in-out;
+    text-decoration: none;
+}
+
+.featured__item:hover, 
+.featured__item:focus {
+    transform: scale(1);
+}
+
+.featured__item:hover .featured__details {
+    opacity: 1;
+    text-shadow: 0 2px 4px rgba(103, 103, 103, 1);
+}
+
+.featured__item::after { 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 100% 100% 0 0;
+    border-radius: 50%;
+    background: #727171;
+    z-index: 1;
+}
+
+.img-details-wrapper {
+    height: 360px;
+    display: grid;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.featured__details {
+    text-align: center;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+    color: #000;
+}
+
+.featured__details span { 
+    display: block;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.featured__img {
+    margin: 0 auto;
+}
+
+.our-products {
+    padding: 150px 0;
+}
+
+.our-products .container .products-wrapper > * {
+    margin-top: 30px;
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product {
+    background: radial-gradient(red, orange, yellow);
+}
+
+.product * + * {
+    margin-top: 20px;
+    line-height: 1;
+}
+
+.product__title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.product__description {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.shoe-red {
+    background: radial-gradient(yellow, orange, red);
+}
+
+.shoe-blue {
+    background: radial-gradient(#6dd5ed, #2193b0, #053006);
+}
+
+.container header img {
+    max-width: 40px;
+    margin-right: 20px;
+}
